@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{if hasmath}} {{insert head_katex.html }}     {{end}}
-  {{if hascode}} {{insert head_highlight.html }}   {{end}}
+   <!-- Un-minified script so that can play a bit -->
+<link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+  
   <link rel="stylesheet" href="/css/judoc.css">
   <link rel="stylesheet" href="/css/poole_hyde.css">
   <!-- style adjustments -->
@@ -19,7 +21,7 @@
     }
   </style>
   <link rel="icon" href="/assets/infra/favicon.ico">
-  {{isdef title}} <title>{{fill title}}</title>  {{end}}
+   <title>Resume/CV</title>  
 </head>
 <body>
 <div class="sidebar">
@@ -29,12 +31,33 @@
       <p class="lead">Posts on optimization, inverse design, and scientific ML.</p>
     </div>
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item {{ispage index.html}}active{{end}}" href="/">Home</a>
-      <a class="sidebar-nav-item {{ispage pub/resume.html}}active{{end}}" href="/pub/resume.html">Resume/CV</a>
-      <a class="sidebar-nav-item {{ispage pub/technical-notes.html}}active{{end}}" href="/pub/technical-notes.html">Technical Notes</a>
+      <a class="sidebar-nav-item " href="/">Home</a>
+      <a class="sidebar-nav-item active" href="/pub/resume.html">Resume/CV</a>
+      <a class="sidebar-nav-item " href="/pub/technical-notes.html">Technical Notes</a>
     </nav>
-    <p>&copy; {{fill author}}.</p>
+    <p>&copy; Pawel Latawiec.</p>
   </div>
 </div>
 <div class="content container">
 <!-- Content appended here -->
+
+<div class="jd-content">
+<h1 id="resumecv"><a href="/pub/resume.html#resumecv">Resume/CV</a></h1>
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Pawel Latawiec. Last modified: December 29, 2019. Website built with <a href="https://github.com/tlienart/JuDoc.jl">JuDoc.jl</a>.
+  </div>
+</div>
+
+</div>
+<!-- CONTENT ENDS HERE -->
+    </div>  <!-- div: content container -->
+    
+        <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+  </body>
+</html>
